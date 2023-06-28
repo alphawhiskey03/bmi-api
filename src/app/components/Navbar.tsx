@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Link from "next/link";
 import { getServerSession } from "next-auth";
-import { buttonVariants } from "@/app/components/Button";
+import { buttonVariants } from "@/app/components/ui/Button";
 import SiginInButton from "@/components/SiginButton";
 import SignOutButton from "@/components/SignOutButton";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -43,12 +43,15 @@ const Navbar: FC<NavbarProps> = async () => {
           >
             Documentation
           </Link>
+
           {session ? (
             <>
               <Link
                 className={buttonVariants({ variant: "ghost" })}
                 href="/dashboard"
-              ></Link>
+              >
+                Dashboard
+              </Link>
               <SignOutButton />
             </>
           ) : (
