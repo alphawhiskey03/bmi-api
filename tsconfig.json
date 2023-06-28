@@ -41,6 +41,9 @@
       ],
       "@/helpers":[
         "./src/helpers/*"
+      ],
+      "@/data":[
+        "./data/*"
       ]
     }
   },
