@@ -7,7 +7,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/ui/DropdownMenu";
-import Button from "@/app/components/Button";
+import Button from "@/app/components/ui/Button";
 import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
 import { Sun, Moon, Laptop } from "lucide-react";
 import Icon from "@/components/Icons";
