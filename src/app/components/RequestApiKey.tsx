@@ -16,6 +16,7 @@ const RequestApiKey: FC = ({}) => {
   const createNewApiKey = async (e: FormEvent) => {
     e.preventDefault();
     try {
+      setIsCreating(true);
       const generateApiKey = await createApiKey();
       setApiKey(generateApiKey);
     } catch (err) {
