@@ -1,4 +1,3 @@
-import { FC } from "react";
 import type { Metadata } from "next";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
@@ -11,7 +10,8 @@ export const metadata: Metadata = {
   title: "BMI API | Dashboard",
   description: "Free & open source BMI API",
 };
-const Page: FC = async ({}) => {
+
+const page = async () => {
   const user = await getServerSession(authOptions);
   if (!user) notFound();
 
@@ -21,6 +21,7 @@ const Page: FC = async ({}) => {
       enabled: true,
     },
   });
+
   return (
     <div className="max-w-7xl mx-auto mt-16">
       {apiKey ? <ApiDashboard /> : <RequestApiKey />}
@@ -28,4 +29,4 @@ const Page: FC = async ({}) => {
   );
 };
 
-export default Page;
+export default page;
