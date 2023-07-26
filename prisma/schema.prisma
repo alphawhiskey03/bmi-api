@@ -90,28 +90,29 @@ model VerificationToken {
 model MaleZscores {
   id     String @id @default(cuid())
   year   String @unique
-  month  String @unique
-  sd4neg String
-  sd3neg String
-  sd2neg String
-  sd1neg String
-  sd0    String
-  sd1    String
-  sd2    String
-  sd3    String
-  sd4    String
+  month  Int    @unique
+  sd4neg Float
+  sd3neg Float
+  sd2neg Float
+  sd1neg Float
+  sd0    Float
+  sd1    Float
+  sd2    Float
+  sd3    Float
+  sd4    Float
 }
 
 model FemaleZscores {
   id     String @id @default(cuid())
   year   String @unique
-  month  String @unique
-  sd4neg String
-  sd3neg String
-  sd1neg String
-  sd0    String
-  sd1    String
-  sd2    String
-  sd3    String
-  sd4    String
+  month  Int    @unique
+  sd4neg Float
+  sd3neg Float
+  sd2neg Float
+  sd1neg Float
+  sd0    Float
+  sd1    Float
+  sd2    Float
+  sd3    Float
+  sd4    Float
 }
