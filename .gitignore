@@ -37,3 +37,6 @@ next-env.d.ts
 
 #info
 imp.txt
+
+#dumps
+data/
