@@ -184,6 +184,12 @@ const DropdownMenuShortcut = ({
 };
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut";
 
+const Label = ({ children }: { children: React.ReactNode }) => (
+  <DropdownMenuPrimitive.Label className="text-dark dark:text-white">
+    {children}
+  </DropdownMenuPrimitive.Label>
+);
+
 export {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -200,4 +206,5 @@ export {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuRadioGroup,
+  Label,
 };
