@@ -16,6 +16,7 @@ const ApiDashboard: FC = async ({}) => {
   const apiKeys = await db.apiKey.findMany({
     where: {
       userId: user.user.id,
+      enabled: true,
     },
   });
 
