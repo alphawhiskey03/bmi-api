@@ -5,7 +5,7 @@ import LargeHeading from "@/ui/LargeHeading";
 import DocumentationTabs from "@/components/DocumentationTabs";
 import "simplebar-react/dist/simplebar.min.css";
 
-export const metadat: Metadata = {
+export const metadata: Metadata = {
   title: "BMI API | Documentation",
   description: "Open source BMI Api",
 };
