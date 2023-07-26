@@ -22,10 +22,10 @@ export const insertFemaleZScores = async (): Promise<FemaleZscoreData[]> => {
   const uniqueData = findUniqueRows(female);
   return Promise.all(
     uniqueData.map((m: any) => {
-      const { _id, __v, ...rest } = m;
+      // const { _id, __v, ...rest } = m;
       return db.femaleZscores.create({
         data: {
-          ...rest,
+          ...m,
         },
       });
     })
