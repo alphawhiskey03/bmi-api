@@ -10,7 +10,7 @@ export const metadat: Metadata = {
   description: "Open source BMI Api",
 };
 
-const Page: FC = () => {
+const page: FC = () => {
   return (
     <div className="container w-7xl mx-auto mt-12 pb-10">
       <div className="flex flex-col justify-center items-center gap-6 w-full">
@@ -22,4 +22,4 @@ const Page: FC = () => {
   );
 };
 
-export default Page;
+export default page;
