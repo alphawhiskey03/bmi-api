@@ -23,14 +23,13 @@ export default function Home() {
           <Paragraph className="max-w-xl lg:text-left">
             Integrate precise BMI, body type, BMR, and TDEE calculations.
             Support users on their wellness journey with comprehensive health
-            analytics{" "}
+            analytics.{" "}
             <Link
               href="/documentation"
               className="underline underline-offset-2 text-black dark:text-light-gold"
             >
-              Know more
+              Learn more
             </Link>
-            .
             <br />
             <Link
               href="/login"
