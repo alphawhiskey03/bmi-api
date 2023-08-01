@@ -30,7 +30,7 @@ const Navbar: FC<NavbarProps> = async () => {
     >
       <div className="container max-w-7xl mx-auto w-full flex justify-between">
         <Link href="/" className={buttonVariants({ variant: "link" })}>
-          BMI app
+          The Health Api
         </Link>
         <div className="md:hidden">
           <ThemeToggle />
