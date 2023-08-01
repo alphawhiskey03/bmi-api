@@ -102,7 +102,7 @@ const API_DOCUMENTATION: APIDocumentation = {
       "height": "6'4",
       "sex": "male",
       "nutritionLevel": "Normal",
-      "BMI": 19.475611624353444
+      "BMI": 19.47
   }`,
   },
   bmr: {
@@ -172,8 +172,8 @@ const API_DOCUMENTATION: APIDocumentation = {
     },
     response: `{
       "success": true,
-      "BMR": 1817.2477920000003,
-      "TDEE": 2180.6973504000002
+      "BMR": 1817.24,
+      "TDEE": 2180.7
   }`,
   },
 };
