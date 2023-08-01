@@ -43,5 +43,5 @@ export const convertCMtoMeter = (height: string): number => {
 };
 
 export const calculateTDEE = (activityFactor: string, bmr: number): number => {
-  return bmr * ACTIVITY_CONSTANTS[activityFactor];
+  return parseFloat((bmr * ACTIVITY_CONSTANTS[activityFactor]).toFixed(2));
 };
