@@ -7,8 +7,8 @@ import ApiDashboard from "@/app/components/ApiDashboard";
 import RequestApiKey from "@/app/components/RequestApiKey";
 
 export const metadata: Metadata = {
-  title: "BMI API | Dashboard",
-  description: "Free & open source BMI API",
+  title: "THA | Dashboard",
+  description: "Open source vital health Api",
 };
 
 const page = async () => {

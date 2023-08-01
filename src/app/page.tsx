@@ -5,8 +5,8 @@ import Paragraph from "@/components/ui/Paragraph";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "BMI Api | Home",
-  description: "Open source BMI Api",
+  title: "THA | Home",
+  description: "Open source vital health Api",
 };
 export default function Home() {
   return (
@@ -17,16 +17,26 @@ export default function Home() {
             size="lg"
             className="three-d text-black dark:text-light-gold"
           >
-            Easily determine <br />
-            BMI and body type
+            Vital Health
+            <br /> Analytics API
           </LargeHeading>
           <Paragraph className="max-w-xl lg:text-left">
-            With the BMI API, you can easily determine your Body type{" "}
+            Integrate precise BMI, body type, BMR, and TDEE calculations.
+            Support users on their wellness journey with comprehensive health
+            analytics{" "}
+            <Link
+              href="/documentation"
+              className="underline underline-offset-2 text-black dark:text-light-gold"
+            >
+              Know more
+            </Link>
+            .
+            <br />
             <Link
               href="/login"
               className="underline underline-offset-2 text-black dark:text-light-gold"
             >
-              API Key
+              Get your API Key
             </Link>
           </Paragraph>
           <div className="relative w-full max-w-lg lg:max-w-3xl lg:left-1/2 aspect-square lg:absolute flex items-center justify-center">
