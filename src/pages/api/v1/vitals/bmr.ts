@@ -58,8 +58,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const weightInKg: number =
       unitPreference == "us" ? convertWeightUStoMetric(weight) : weight;
 
-    const BMR = 10 * weightInKg + 6.25 * heightInCM - 5 * age + 5;
-    const TDEE = calculateTDEE(activityFactor, BMR);
+    const BMR: number = parseFloat(
+      (10 * weightInKg + 6.25 * heightInCM - 5 * age + 5).toFixed(2)
+    );
+    const TDEE: number = calculateTDEE(activityFactor, BMR);
 
     const duration = new Date().getTime() - start.getTime();
 

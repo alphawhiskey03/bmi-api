@@ -58,7 +58,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const weightInKg: number =
       unitPreference === "us" ? convertWeightUStoMetric(weight) : weight;
 
-    const BMI: number = weightInKg / (heightInMeter * heightInMeter);
+    const BMI: number = parseFloat(
+      (weightInKg / (heightInMeter * heightInMeter)).toFixed(2)
+    );
 
     const nutritionLevel = await getNutritionLevel(BMI, sex, ageInMonths);
 
