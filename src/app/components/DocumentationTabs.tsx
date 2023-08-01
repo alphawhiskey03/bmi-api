@@ -62,34 +62,56 @@ const DocumentationTabs: FC<DocumentationTabsProps> = () => {
         </DropdownMenu>
       </div>
       <Paragraph>api/v1/{code}</Paragraph>
+      <>{ReactHTMLParser(Documentation[code.toLowerCase()].description)}</>
 
-      <Tabs defaultValue="nodejs" className="max-w-2xl w-full">
-        <TabsList>
-          <TabsTrigger value="nodejs">NodeJs</TabsTrigger>
+      <div className="flex flex-col lg:flex-row w-full">
+        <div className="grow">
+          <Tabs defaultValue="nodejs" className="max-w-2xl">
+            <TabsList>
+              <TabsTrigger value="nodejs">NodeJs</TabsTrigger>
 
-          <TabsTrigger value="python">Python</TabsTrigger>
-        </TabsList>
-        <TabsContent value="nodejs">
-          <SimpleBar>
-            <Code
-              language="javascript"
-              code={Documentation[code.toLowerCase()].code.nodejs}
-              show
-              animated
-            />
-          </SimpleBar>
-        </TabsContent>
-        <TabsContent value="python">
-          <SimpleBar>
-            <Code
-              language="python"
-              code={Documentation[code.toLowerCase()].code.python}
-              show
-              animated
-            />
-          </SimpleBar>
-        </TabsContent>
-      </Tabs>
+              <TabsTrigger value="python">Python</TabsTrigger>
+            </TabsList>
+            <TabsContent value="nodejs">
+              <SimpleBar>
+                <Code
+                  language="javascript"
+                  code={Documentation[code.toLowerCase()].code.nodejs}
+                  show
+                  animated
+                />
+              </SimpleBar>
+            </TabsContent>
+            <TabsContent value="python">
+              <SimpleBar>
+                <Code
+                  language="python"
+                  code={Documentation[code.toLowerCase()].code.python}
+                  show
+                  animated
+                />
+              </SimpleBar>
+            </TabsContent>
+          </Tabs>
+        </div>
+        <div className="w-[100%] md:w-[40%]">
+          <Tabs defaultValue="response">
+            <TabsList>
+              <TabsTrigger value="response">Example response</TabsTrigger>
+            </TabsList>
+            <TabsContent value="response">
+              <SimpleBar>
+                <Code
+                  language="json"
+                  code={Documentation[code.toLowerCase()].response}
+                  show
+                  animated
+                />
+              </SimpleBar>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </div>
     </>
   );
 };
