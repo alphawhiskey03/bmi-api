@@ -2,10 +2,12 @@ import { FC } from "react";
 import Link from "next/link";
 import { getServerSession } from "next-auth";
 import { buttonVariants } from "@/app/components/ui/Button";
-import SiginInButton from "@/components/SiginButton";
+import Icons from "@/components/Icons";
+import SignInButton from "@/app/components/SignInButton";
 import SignOutButton from "@/components/SignOutButton";
 import ThemeToggle from "@/components/ThemeToggle";
 import { authOptions } from "@/lib/auth";
+import MobileNavigation from "./MobileNavigation";
 
 interface NavbarProps {}
 const Navbar: FC<NavbarProps> = async () => {
@@ -32,30 +34,49 @@ const Navbar: FC<NavbarProps> = async () => {
         <Link href="/" className={buttonVariants({ variant: "link" })}>
           The Health Api
         </Link>
-        <div className="md:hidden">
+        <div className="flex gap-3 md:hidden">
           <ThemeToggle />
+          <div className="flex md:hidden">
+            <MobileNavigation
+              authButton={
+                session ? (
+                  <SignOutButton variant="ghost" />
+                ) : (
+                  <SignInButton variant="ghost" />
+                )
+              }
+            />
+          </div>
         </div>
         <div className="hidden md:flex gap-4">
           <ThemeToggle />
           <Link
             href="/documentation"
-            className={buttonVariants({ variant: "ghost" })}
+            className={buttonVariants({
+              variant: "ghost",
+              className: "flex gap-1",
+            })}
           >
-            Documentation
+            <Icons.FileCode2 />
+            <span> Documentation</span>
           </Link>
 
           {session ? (
             <>
               <Link
-                className={buttonVariants({ variant: "ghost" })}
+                className={buttonVariants({
+                  variant: "ghost",
+                  className: "flex gap-1",
+                })}
                 href="/dashboard"
               >
-                Dashboard
+                <Icons.LayoutDashboard />
+                <span> Dashboard</span>
               </Link>
-              <SignOutButton />
+              <SignOutButton variant="outline" />
             </>
           ) : (
-            <SiginInButton />
+            <SignInButton variant="outline" />
           )}
         </div>
       </div>
