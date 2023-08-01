@@ -6,9 +6,9 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuTrigger,
 } from "@/ui/DropdownMenu";
 import Button from "@/app/components/ui/Button";
-import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
 import Icon from "@/components/Icons";
 
 interface ThemeToggleProps {}
