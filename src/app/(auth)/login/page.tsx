@@ -5,6 +5,7 @@ import Paragraph from "@/components/ui/Paragraph";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { FC } from "react";
+import SignInButton from "@/app/components/SignInButton";
 
 export const metadata: Metadata = {
   title: "THA | login",
@@ -28,8 +29,9 @@ const page: FC = () => {
               Back to home
             </Link>
 
-            <LargeHeading>Welcome back!</LargeHeading>
+            <LargeHeading>Hey there!</LargeHeading>
             <Paragraph>Please sign in using your Google account.</Paragraph>
+            <SignInButton variant="outline" />
           </div>
         </div>
       </div>
